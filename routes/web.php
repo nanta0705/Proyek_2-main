@@ -19,8 +19,12 @@ use App\Http\Controllers\AppController;
 Route::get('/', [LandingController::class, 'index']);
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'login'])->name('login');
+
 Route::get('/admin/dashboard', [AppController::class, 'admin']);
+Route::get('/admin/daftar_akun_client', function () {
+    return view('admin.pages.akun_client');
+});
+Route::get('/owner/dashboard', [AppController::class, 'owner']);
+Route::get('/client/dashboard', [AppController::class, 'client']);
 
 Route::get('/logout', [LoginController::class, 'logout']);
-
-

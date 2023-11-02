@@ -1,76 +1,63 @@
-<div class="container-xxl py-5">
+<section class="services-section spad">
     <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title text-center text-primary text-uppercase">Our Services</h6>
-            <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Services</span></h1>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <span>What We Do</span>
+                    <h2>Temukan Style Impianmu</h2>
+                </div>
+            </div>
         </div>
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <a class="service-item rounded" href="">
-                    <div class="service-icon bg-transparent border rounded p-1">
-                        <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                            <i class="fa fa-hotel fa-2x text-primary"></i>
-                        </div>
-                    </div>
-                    <h5 class="mb-3">Rooms & Appartment</h5>
-                    <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                </a>
+        <div class="row">
+            <div class="col-lg-4 col-sm-6">
+                <div class="service-item">
+                    <img src="{{asset('assets/foto/wedding.jpg')}}" alt="" width="150px">
+                    <h4>Wedding Makeup</h4>
+                    <p>Makeup dengan nuansa sakral pernikahan yang membuat hari specialmu bersinar,
+                        terdapat banyak pilihan adat yang dipakai
+                    </p>
+                </div>
             </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                <a class="service-item rounded" href="">
-                    <div class="service-icon bg-transparent border rounded p-1">
-                        <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                            <i class="fa fa-utensils fa-2x text-primary"></i>
-                        </div>
-                    </div>
-                    <h5 class="mb-3">Food & Restaurant</h5>
-                    <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                </a>
+            <div class="col-lg-4 col-sm-6">
+                <div class="service-item">
+                    <img src="{{asset('assets/foto/prewedding.jpg')}}" alt="" width="2000px">
+                    <h4>Pre-Wedding Makeup</h4>
+                    <p>Makeup sebelum pernikahan bisa memilih style adat suku , casual , outdoor,
+                        sesuai keinginan dari client
+                    </p>
+                </div>
             </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <a class="service-item rounded" href="">
-                    <div class="service-icon bg-transparent border rounded p-1">
-                        <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                            <i class="fa fa-spa fa-2x text-primary"></i>
-                        </div>
-                    </div>
-                    <h5 class="mb-3">Spa & Fitness</h5>
-                    <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                </a>
+            <div class="col-lg-4 col-sm-6">
+                <div class="service-item">
+                    <img src="{{asset('assets/foto/graduation.jpg')}}" alt="" width="180px">
+                    <h4>Graduation Makeup</h4>
+                    <p>Makeup untuk perayaan wisuda , baik itu wisuda SMP, SMA /SMK,
+                        bisa juga untuk tingkat perguruan tinggi </p>
+                </div>
             </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                <a class="service-item rounded" href="">
-                    <div class="service-icon bg-transparent border rounded p-1">
-                        <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                            <i class="fa fa-swimmer fa-2x text-primary"></i>
-                        </div>
-                    </div>
-                    <h5 class="mb-3">Sports & Gaming</h5>
-                    <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                </a>
+            <div class="col-lg-4 col-sm-6">
+                <div class="service-item">
+                    <img src="{{asset('assets/foto/maternity.jpg')}}" alt="" width="180px">
+                    <h4>Maternity Makeup</h4>
+                    <p>Pancarkan aura kehamilan dengan makeup jenis maternity sebelum mengebadikan moment photoshoot</p>
+                </div>
             </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <a class="service-item rounded" href="">
-                    <div class="service-icon bg-transparent border rounded p-1">
-                        <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                            <i class="fa fa-glass-cheers fa-2x text-primary"></i>
-                        </div>
-                    </div>
-                    <h5 class="mb-3">Event & Party</h5>
-                    <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                </a>
+            <div class="col-lg-4 col-sm-6">
+                <div class="service-item">
+                    <img src="{{asset('assets/foto/engagement.jpg')}}" alt="" width="180px">
+                    <h4>Engagement Makeup</h4>
+                    <p>Dihari istimewa tunanganmu tentunya ingin dihiasi aura wajah yang berbeda ,
+                        dengan makeup style engagement pilihan terbaikmu.
+                    </p>
+                </div>
             </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                <a class="service-item rounded" href="">
-                    <div class="service-icon bg-transparent border rounded p-1">
-                        <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                            <i class="fa fa-dumbbell fa-2x text-primary"></i>
-                        </div>
-                    </div>
-                    <h5 class="mb-3">GYM & Yoga</h5>
-                    <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                </a>
+            <div class="col-lg-4 col-sm-6">
+                <div class="service-item">
+                    <img src="{{asset('assets/foto/ngunduh mantu.jpg')}}" alt="" width="180px">
+                    <h4>Ngunduh Mantu Makeup</h4>
+                    <p>Makeup dengan ciri khas suku adat mempelai laki-laki ataupun wani.</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>

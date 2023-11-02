@@ -10,4 +10,14 @@ class AppController extends Controller
     {
         return view('admin.dashboard');
     }
+
+    public function owner()
+    {
+        return view('owner.dashboard');
+    }
+
+    public function client()
+    {
+        return view('client.dashboard');
+    }
 }

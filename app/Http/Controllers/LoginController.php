@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         return view('autentikasi.login');
     }
     public function login(Request $request)
@@ -28,14 +29,19 @@ class LoginController extends Controller
 
             if ($user->role_id == 1) {
                 return redirect("/admin/dashboard")->withSuccess('Selamat Anda Berhasil Login, Selamat Datang ' . Auth::user()->name);
+            } else if ($user->role_id == 2) {
+                return redirect("/owner/dashboard")->withsuccess('selamat anda berhasil login, selmat datang' . Auth::user()->name);
+            } else if ($user->role_id == 3) {
+                return redirect("/client/dashboard")->withsuccess('selamat anda berhasil login, selamat datang' . Auth::user()->name);
             }
         } else {
             return back()->withError('error');
         }
     }
 
-    public function logout(){
+    public function logout()
+    {
         Auth::logout();
-        return redirect ('/login');
+        return redirect('/login');
     }
 }
