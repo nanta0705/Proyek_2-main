@@ -9,7 +9,7 @@
         </ol>
     </div>
     <div class="ms-auto pageheader-btn">
-    <a class="btn btn-primary" data-bs-target="#modaldemo1" data-bs-toggle="modal" href="">View Live Demo</a>
+        <a class="btn btn-primary" data-bs-target="#modaldemo1" data-bs-toggle="modal" href="">View Live Demo</a>
         <a href="javascript:void(0);" class="btn btn-success btn-icon text-white">
             <span>
                 <i class="fe fe-log-in"></i>
@@ -43,7 +43,17 @@
                                 <td>{{$data->alamat}}</td>
                                 <td>{{$data->no_tlp}}</td>
                                 <td>{{$data->username}}</td>
-                                <td>{{$data->alamat}}</td>
+                                <td class="text-center">
+                                    <a class="btn btn-warning" data-bs-target="#modaldemo2{{$data->id}}" data-bs-toggle="modal" href=""><i class="fa fa-edit"></i></a>
+                                    <form method="POST" action="{{url('/admin/data_client/'.$data->id)}}">
+                                        @method('delete')
+                                        @csrf
+                                    <button type="submit" onclick="return confirm('apakah data ingin dihapus')"
+                                        class="btn btn-danger ">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </form>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -53,51 +63,100 @@
         </div>
     </div>
 </div>
-<div class="modal fade"  id="modaldemo1">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content modal-content-demo">
-					<div class="modal-header">
-						<h6 class="modal-title">Message Preview</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" ><span aria-hidden="true">&times;</span></button>
-					</div>
-					<form action="{{url('/admin/data_client')}}" method="post">
-                        @csrf
-                    <div class="modal-body">
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <label class="form-label">nama</label>
-                                <input class="form-control  mb-4 is-valid state-valid" placeholder="Masukan Nama"
-                                    required="" type="text" name="nama">
-                            </div>
+{{-- Create Modal --}}
+<div class="modal fade" id="modaldemo1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal-content-demo">
+            <div class="modal-header">
+                <h6 class="modal-title">Message Preview</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <form action="{{url('/admin/data_client')}}" method="post">
+                @csrf
+                <div class="modal-body">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="form-label">nama</label>
+                            <input class="form-control  mb-4 is-valid state-valid" placeholder="Masukan Nama" required="" type="text" name="nama">
                         </div>
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <label class="form-label">alamat</label>
-                                <input class="form-control  mb-4 is-valid state-valid" placeholder="Masukan alamat"
-                                    required="" type="text" name="alamat">
-                            </div>
-
-                            </div>
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <label class="form-label">no telepon</label>
-                                <input class="form-control  mb-4 is-valid state-valid" placeholder="Masukan no telepon"
-                                    required="" type="number" name="no_telepon">
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="form-label">alamat</label>
+                            <input class="form-control  mb-4 is-valid state-valid" placeholder="Masukan alamat" required="" type="text" name="alamat">
                         </div>
 
-                                    </div>
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <label class="form-label">email</label>
-                                <input class="form-control  mb-4 is-valid state-valid" placeholder="Masukan email"
-                                    required="" type="email" name="email">
-                            </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="form-label">no telepon</label>
+                            <input class="form-control  mb-4 is-valid state-valid" placeholder="Masukan no telepon" required="" type="number" name="no_telepon">
                         </div>
-					</div>
-                    <div class="modal-footer">
-						<button class="btn btn-primary" type="submit" >Save changes</button> <button class="btn btn-light" data-bs-dismiss="modal" >Close</button>
-					</div>
-                    </form>
-				</div>
-			</div>
-		</div>
+
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="form-label">email</label>
+                            <input class="form-control  mb-4 is-valid state-valid" placeholder="Masukan email" required="" type="email" name="email">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit">Save changes</button> <button class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{{-- Create Modal --}}
+
+{{-- Start Edit Modal --}}
+@foreach ($user as $edit)
+
+
+<div class="modal fade" id="modaldemo2{{$edit->id}}">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal-content-demo">
+            <div class="modal-header">
+                <h6 class="modal-title">Edit</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <form action="{{url('/admin/data_client/' .$edit->id)}}" method="post">
+                @csrf
+                @method('put')
+                <div class="modal-body">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="form-label">name</label>
+                            <input value="{{$edit->name}}" class="form-control  mb-4 is-valid state-valid" placeholder="Masukan Nama" required="" type="text" name="nama">
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="form-label">alamat</label>
+                            <input value="{{$edit->alamat}}" class="form-control  mb-4 is-valid state-valid" placeholder="Masukan alamat" required="" type="text" name="alamat">
+                        </div>
+
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="form-label">no telepon</label>
+                            <input value="{{$edit->no_tlp}}" class="form-control  mb-4 is-valid state-valid" placeholder="Masukan no telepon" required="" type="number" name="no_telepon">
+                        </div>
+
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="form-label">email</label>
+                            <input value="{{$edit->email}}" class="form-control  mb-4 is-valid state-valid" placeholder="Masukan email" required="" type="email" name="email">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit">Save changes</button> <button class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@endforeach
+{{-- End Edit Modal --}}
 @endsection

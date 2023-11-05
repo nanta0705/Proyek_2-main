@@ -192,6 +192,8 @@
 
     <!-- Js Plugins -->
     @include('layout_landing.js.v_js')
+    @include('sweetalert::alert')
+
 
 </body>
 

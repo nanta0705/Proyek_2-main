@@ -156,12 +156,16 @@
     <!-- CUSTOM JS -->
     <script src="{{url('/assets')}}/js/custom.js"></script>
 
+
     <script src="{{ url('/assets') }}/plugins/datatable/js/jquery.dataTables.min.js"></script>
     <script src="{{ url('/assets') }}/plugins/datatable/js/dataTables.bootstrap5.js"></script>
     <script src="{{ url('/assets') }}/plugins/datatable/js/dataTables.buttons.min.js"></script>
     <script src="{{ url('/assets') }}/plugins/datatable/dataTables.responsive.min.js"></script>
     <script src="{{ url('/assets') }}/plugins/datatable/responsive.bootstrap5.min.js"></script>
     <script src="{{ url('/assets') }}/js/table-data.js"></script>
+
+    @include('sweetalert::alert')
+
 
 </body>
 
