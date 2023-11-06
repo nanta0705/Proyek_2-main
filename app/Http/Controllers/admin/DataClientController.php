@@ -12,7 +12,7 @@ class DataClientController extends Controller
 {
     public function index()
     {
-        $user = User::all();
+        $user = User::where('role_id', 3)->get();
         return view('admin.akun_client.index', compact('user'));
     }
 

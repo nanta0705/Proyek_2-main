@@ -39,10 +39,16 @@
                     <ul class="slide-menu">
                         <li class="side-menu-label1"><a href="javascript:void(0)">Akun</a></li>
                         <li><a href="{{url('/admin/data_client')}}" class="slide-item"> Akun Client</a></li>
-                        <li><a href="profile.html" class="slide-item"> Akun Owner</a></li>
+                        <li><a href="{{url('/admin/data_')}}" class="slide-item"> Akun Owner</a></li>
+
 
                     </ul>
                 </li>
+
+                <li class="slide">
+                    <a class="side-menu__item" data-bs-toggle="slide" href="{{url('/owner/katalog_makeup')}}"><i class="side-menu__icon fe fe-home"></i><span class="side-menu__label">Katalog Makeup</span></a>
+                </li>
+
                 <li class="sub-category">
                     <h3>Custom & Error Pages</h3>
                 </li>

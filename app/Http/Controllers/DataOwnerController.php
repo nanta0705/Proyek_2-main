@@ -14,7 +14,7 @@ class DataOwnerController extends Controller
 {
     public function index()
     {
-        $user = User::all();
+        $user = User::where('role_id', 2)->get();
         return view("admin.akun_owner.index", compact('user'));
     }
 
@@ -28,7 +28,7 @@ class DataOwnerController extends Controller
                 'password' => bcrypt('password'),
                 'no_tlp' => $request->no_telepon,
                 'alamat' => $request->alamat,
-                'role_id' => '3',
+                'role_id' => '2',
 
             ]);
             return back()->with('success');
