@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AppController;
-
+use App\Http\Controllers\DataOwnerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,8 +27,10 @@ Route::get('/admin/dashboard', [AppController::class, 'admin']);
 //     return view('admin.pages.akun_client');
 // });
 Route::resource('/admin/data_client', DataClientController::class);
+Route::resource('/admin/data_owner', DataOwnerController::class);
 
 Route::get('/owner/dashboard', [AppController::class, 'owner']);
 Route::get('/client/dashboard', [AppController::class, 'client']);
+
 
 Route::get('/logout', [LoginController::class, 'logout']);
