@@ -31,7 +31,7 @@
 					<img src="images/img-01.png" alt="IMG">page
 				</div>
 
-				<form action="{{route('login')}}" method="POST" class="login100-form validate-form">
+				<form action="{{url('/register')}}" method="POST" class="login100-form validate-form">
 					<!-- fungsi bagian pengamanan -->
                     @csrf
 					<span class="login100-form-title">
@@ -39,7 +39,23 @@
 					</span>
 
 					<div class="wrap-input100 validate-input" >
-						<input class="input100" type="text" name="username" placeholder="username">
+						<input class="input100" type="text" name="name" placeholder="masukan nama">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+                    <div class="wrap-input100 validate-input" >
+						<input class="input100" type="text" name="username" placeholder="masukan username">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+                    <div class="wrap-input100 validate-input" >
+						<input class="input100" type="text" name="email" placeholder="masukan email">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
@@ -54,9 +70,25 @@
 						</span>
 					</div>
 
+                    <div class="wrap-input100 validate-input" >
+						<input class="input100" type="text" name="no_tlp" placeholder="masukan no_tlp">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+                    <div class="wrap-input100 validate-input" >
+						<input class="input100" type="text" name="alamat" placeholder="masukan alamat">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-							Login
+							login
 						</button>
 					</div>
 
@@ -70,10 +102,6 @@
 					</div>
 
 					<div class="text-center p-t-136">
-						<a class="txt2" href="{{url('/register')}}">
-							Create your Account
-							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-						</a>
 					</div>
 				</form>
 			</div>

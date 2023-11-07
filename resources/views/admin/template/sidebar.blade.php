@@ -23,14 +23,7 @@
                 </li>
 
 
-                <li class="slide">
-                    <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0);"><i class="side-menu__icon fe fe-clipboard"></i><span class="side-menu__label">Tables</span><span class="badge bg-secondary side-badge">2</span><i class="angle fa fa-angle-right hor-rightangle"></i></a>
-                    <ul class="slide-menu">
-                        <li class="side-menu-label1"><a href="javascript:void(0)">Tables</a></li>
-                        <li><a href="tables.html" class="slide-item">Default table</a></li>
-                        <li><a href="datatable.html" class="slide-item"> Data Tables</a></li>
-                    </ul>
-                </li>
+
                 <li class="sub-category">
                     <h3>Akun</h3>
                 </li>
