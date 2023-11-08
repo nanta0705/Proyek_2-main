@@ -35,7 +35,7 @@
 					<!-- fungsi bagian pengamanan -->
                     @csrf
 					<span class="login100-form-title">
-						Member Login
+						Register
 					</span>
 
 					<div class="wrap-input100 validate-input" >
