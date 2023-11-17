@@ -4,17 +4,13 @@
     <div>
         <h1 class="page-title">Dashboard 01</h1>
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Dashboard 01</li>
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Katalog Makeup</li>
         </ol>
     </div>
     <div class="ms-auto pageheader-btn">
-        <a class="btn btn-primary" data-bs-target="#modaldemo1" data-bs-toggle="modal" href="">View Live Demo</a>
-        <a href="javascript:void(0);" class="btn btn-success btn-icon text-white">
-            <span>
-                <i class="fe fe-log-in"></i>
-            </span> Export
-        </a>
+        <a class="btn btn-primary" data-bs-target="#modaldemo1" data-bs-toggle="modal" href=""><i
+            class="fa fa-plus">Tambah Data</i></a>
     </div>
 </div>
 <!-- PAGE-HEADER END -->
@@ -34,6 +30,7 @@
                                 <th class="wd-20p border-bottom-0">description</th>
                                 <th class="wd-15p border-bottom-0">price</th>
                                 <th class="wd-15p border-bottom-0">image</th>
+                                <th class="wd-15p border-bottom-0">action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -42,8 +39,8 @@
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$data->name}}</td>
                                 <td>{{$data->description}}</td>
-                                <td>{{$data->price}}</td>
-                                <td>{{$data->image}}</td>
+                                <td>{{'Rp', number_format($data->price, 0, ', ', ',')}}</td>
+                                <td><img src="{{asset(''). $data->image}}" style="width:60px;height:60"></td>
                                 <td class="text-center">
                                     <a class="btn btn-warning" data-bs-target="#modaldemo2{{$data->id}}" data-bs-toggle="modal" href=""><i class="fa fa-edit"></i></a>
                                     <form method="POST" action="{{url('/admin/katalog_makeup/'.$data->id)}}">
