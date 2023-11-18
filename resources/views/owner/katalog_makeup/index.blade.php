@@ -18,7 +18,7 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Responsive DataTable</h3>
+                <h3 class="card-title">Makeup DataTable</h3>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -61,4 +61,51 @@
         </div>
     </div>
 </div>
+
+{{-- Start Tambah Modal --}}
+
+<div class="modal fade" id="modaldemo1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal-content-demo">
+            <div class="modal-header">
+                <h6 class="modal-title">Tambah Data Makeup</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <form action="{{url('/owner/katalog_makeup')}}" method="post">
+                @csrf
+                <div class="modal-body">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="form-label">nama makeup</label>
+                            <input class="form-control  mb-4 is-valid state-valid" placeholder="Masukan nama makeup" required="" type="text" name="nama">
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="form-label">deskripsi</label>
+                            <input class="form-control  mb-4 is-valid state-valid" placeholder="Masukan deskripsi" required="" type="text" name="description">
+                        </div>
+
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="form-label">harga</label>
+                            <input class="form-control  mb-4 is-valid state-valid" placeholder="Masukan harga" required="" type="number" name="price">
+                        </div>
+
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="form-label">image</label>
+                            <input class="form-control  mb-4 is-valid state-valid" placeholder="Masukan image"  type="file" name="image">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit">Save changes</button> <button class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{{-- End Tambah Modal --}}
 @endsection
