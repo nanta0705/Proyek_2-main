@@ -193,7 +193,7 @@
                                                     <a class="dropdown-item" href="faq.html">
                                                         <i class="dropdown-icon fe fe-alert-triangle"></i> Need help?
                                                     </a>
-                                                    <a class="dropdown-item" href="login.html">
+                                                    <a class="dropdown-item" href="{{url('/logout')}}">
                                                         <i class="dropdown-icon fe fe-alert-circle"></i> Sign out
                                                     </a>
                                                 </div>

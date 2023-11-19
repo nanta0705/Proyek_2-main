@@ -1,19 +1,21 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
 use RealRashid\SweetAlert\Facades\Alert;
+use App\Models\User;
+use Illuminate\Support\Str;
 
-class DataClientController extends Controller
+
+class DataOwnerController extends Controller
 {
     public function index()
     {
-        $user = User::where('role_id', 3)->get();
-        return view('admin.akun_client.index', compact('user'));
+        $user = User::where('role_id', 2)->get();
+        return view("admin.akun_owner.index", compact('user'));
     }
 
     public function store(Request $request)
@@ -26,7 +28,7 @@ class DataClientController extends Controller
                 'password' => bcrypt('password'),
                 'no_tlp' => $request->no_telepon,
                 'alamat' => $request->alamat,
-                'role_id' => '3',
+                'role_id' => '2',
 
             ]);
             return back()->with('success');

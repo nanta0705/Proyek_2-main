@@ -1,1 +1,3 @@
-<h1>ini client</h1>
+@extends('admin.dashboard')
+@section('content')
+@endsection
