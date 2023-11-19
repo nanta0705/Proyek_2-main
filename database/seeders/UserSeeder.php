@@ -14,13 +14,13 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         User::create([
-            'name' => 'superadmin',
-            'username' => 'superadmin',
-            'email' => 'superadmin@gmail.com',
+            'name' => 'owner',
+            'username' => 'owner',
+            'email' => 'owner@gmail.com',
             'no_tlp' => '0895323255',
             'alamat' => 'indramayu',
             'password' => bcrypt('123456'),
-            'role' => 'superadmin',
+            'role' => 'owner',
         ]);
         User::create([
             'name' => 'admin',
@@ -30,6 +30,15 @@ class UserSeeder extends Seeder
             'alamat' => 'chellange',
             'password' => bcrypt('123456'),
             'role' => 'admin',
+        ]);
+        User::create([
+            'name' => 'client',
+            'username' => 'client',
+            'email' => 'sclient@gmail.com',
+            'no_tlp' => '08953232476',
+            'alamat' => 'indramayu',
+            'password' => bcrypt('123456'),
+            'role' => 'client',
         ]);
     }
 }

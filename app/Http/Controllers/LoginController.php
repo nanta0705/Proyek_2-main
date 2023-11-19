@@ -25,13 +25,14 @@ class LoginController extends Controller
             return back()->withError('hallo');
         }
         if (Auth::attempt(["username" => $request->username, "password" => $request->password])) {
+            // dd($user);
             $request->session()->regenerate();
 
-            if ($user->role_id == 1) {
+            if ($user->role == 'admin') {
                 return redirect("/admin/dashboard")->withSuccess('Selamat Anda Berhasil Login, Selamat Datang ' . Auth::user()->name);
-            } else if ($user->role_id == 2) {
+            } else if ($user->role == 'owner') {
                 return redirect("/owner/dashboard")->withsuccess('selamat anda berhasil login, selmat datang' . Auth::user()->name);
-            } else if ($user->role_id == 3) {
+            } else if ($user->role == 'client') {
                 return redirect("/client/dashboard")->withsuccess('selamat anda berhasil login, selamat datang' . Auth::user()->name);
             }
         } else {
