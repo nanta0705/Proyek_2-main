@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('no_tlp');
             $table->text('alamat');
-            $table->integer('role_id');
+            $table->string('role');
             $table->rememberToken();
             $table->timestamps();
         });
