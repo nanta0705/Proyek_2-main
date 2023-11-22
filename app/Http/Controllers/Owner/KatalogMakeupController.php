@@ -41,6 +41,8 @@ class KatalogMakeupController extends Controller
             Alert::success('Data Makeup Berhasil Ditambahkan');
             return back();
         } catch (\Exception $e) {
+            Alert::error('Data Makeup Gagal Disimpan' . $e->getmessage());
+            return back();
         }
     }
 }
