@@ -28,11 +28,11 @@ class LoginController extends Controller
             // dd($user);
             $request->session()->regenerate();
 
-            if ($user->role == 'admin') {
+            if ($user->role_id == '1') {
                 return redirect("/admin/dashboard")->withSuccess('Selamat Anda Berhasil Login, Selamat Datang ' . Auth::user()->name);
-            } else if ($user->role == 'owner') {
+            } else if ($user->role_id == '2') {
                 return redirect("/owner/dashboard")->withsuccess('selamat anda berhasil login, selmat datang' . Auth::user()->name);
-            } else if ($user->role == 'client') {
+            } else if ($user->role_id == '3') {
                 return redirect("/client/dashboard")->withsuccess('selamat anda berhasil login, selamat datang' . Auth::user()->name);
             }
         } else {

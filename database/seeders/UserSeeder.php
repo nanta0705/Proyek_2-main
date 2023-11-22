@@ -19,8 +19,8 @@ class UserSeeder extends Seeder
             'email' => 'owner@gmail.com',
             'no_tlp' => '0895323255',
             'alamat' => 'indramayu',
-            'password' => bcrypt('123456'),
-            'role' => 'owner',
+            'password' => bcrypt('password'),
+            'role_id' => '2',
         ]);
         User::create([
             'name' => 'admin',
@@ -28,8 +28,8 @@ class UserSeeder extends Seeder
             'email' => 'admin@gmail.com',
             'no_tlp' => '0886789',
             'alamat' => 'chellange',
-            'password' => bcrypt('123456'),
-            'role' => 'admin',
+            'password' => bcrypt('password'),
+            'role_id' => '1',
         ]);
         User::create([
             'name' => 'client',
@@ -37,8 +37,8 @@ class UserSeeder extends Seeder
             'email' => 'sclient@gmail.com',
             'no_tlp' => '08953232476',
             'alamat' => 'indramayu',
-            'password' => bcrypt('123456'),
-            'role' => 'client',
+            'password' => bcrypt('password'),
+            'role_id' => '3',
         ]);
     }
 }

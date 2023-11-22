@@ -32,7 +32,7 @@
                     <ul class="slide-menu">
                         <li class="side-menu-label1"><a href="javascript:void(0)">Akun</a></li>
                         <li><a href="{{url('/admin/data_client')}}" class="slide-item"> Akun Client</a></li>
-                        <li><a href="{{url('/admin/data_')}}" class="slide-item"> Akun Owner</a></li>
+                        <li><a href="{{url('/admin/data_owner')}}" class="slide-item"> Akun Owner</a></li>
 
 
                     </ul>

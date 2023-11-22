@@ -27,7 +27,7 @@ class KatalogMakeupController extends Controller
 
             $ImageName = time() . '.' . $request->image->extention();
 
-            $request->image->move(public_path('image_makeup'), $ImageName);
+            $request->image->move(public_path('katalog_makeup_image'), $ImageName);
 
             KatalogMakeup::create([
                 'name' => $request->name,
@@ -41,7 +41,7 @@ class KatalogMakeupController extends Controller
             Alert::success('Data Makeup Berhasil Ditambahkan');
             return back();
         } catch (\Exception $e) {
-            Alert::error('Data Makeup Gagal Disimpan' . $e->getmessage());
+            Alert::error('Data Makeup Gagal Disimpan!' . $e->getmessage());
             return back();
         }
     }
