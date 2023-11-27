@@ -27,9 +27,7 @@ Route::resource('/register', RegisterController::class);
 
 Route::group(['middleware' => ['autentikasi']], function () {
     Route::get('/admin/dashboard', [AppController::class, 'admin']);
-    // Route::get('/admin/daftar_akun_client', function () {
-    //     return view('admin.pages.akun_client');
-    // });
+
     Route::resource('/admin/data_client', DataClientController::class);
     Route::resource('/admin/data_owner', DataOwnerController::class);
 
