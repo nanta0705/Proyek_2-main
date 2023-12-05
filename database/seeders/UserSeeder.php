@@ -13,15 +13,7 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        User::create([
-            'name' => 'owner',
-            'username' => 'owner',
-            'email' => 'owner@gmail.com',
-            'no_tlp' => '0895323255',
-            'alamat' => 'indramayu',
-            'password' => bcrypt('password'),
-            'role_id' => '2',
-        ]);
+
         User::create([
             'name' => 'admin',
             'username' => 'admin',
@@ -31,6 +23,16 @@ class UserSeeder extends Seeder
             'password' => bcrypt('password'),
             'role_id' => '1',
         ]);
+        User::create([
+            'name' => 'owner',
+            'username' => 'owner',
+            'email' => 'owner@gmail.com',
+            'no_tlp' => '0895323255',
+            'alamat' => 'indramayu',
+            'password' => bcrypt('password'),
+            'role_id' => '2',
+        ]);
+
         User::create([
             'name' => 'client',
             'username' => 'client',

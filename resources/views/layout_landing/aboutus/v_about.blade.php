@@ -18,10 +18,10 @@
                 <div class="about-pic">
                     <div class="row">
                         <div class="col-sm-6">
-                            <img src="img/about/about-1.jpg" alt="">
+                            <img src="{{ url('/landing') }}/img/about/about-1.jpg" alt="">
                         </div>
                         <div class="col-sm-6">
-                            <img src="img/about/about-2.jpg" alt="">
+                            <img src="{{ url('/landing') }}/img/about/about-2.jpg" alt="">
                         </div>
                     </div>
                 </div>

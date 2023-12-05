@@ -5,9 +5,11 @@ namespace App\Models\Owner;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class KatalogMakeup extends Model
+class TypeMakeup extends Model
 {
     use HasFactory;
-    protected $table = 'katalog_makeup';
+
+    protected $table = 'type_makeup';
+
     protected $guarded = [''];
 }

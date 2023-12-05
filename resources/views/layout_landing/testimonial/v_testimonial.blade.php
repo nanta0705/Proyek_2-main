@@ -23,7 +23,7 @@
                             </div>
                             <h5> - Ananta Nurfadhila</h5>
                         </div>
-                        <img src="img/testimonial-logo.png" alt="">
+                        <img src="{{ url('/landing') }}/img/testimonial-logo.png" alt="">
                     </div>
                     <div class="ts-item">
                         <p>menurut saya aplikasi ini....</p>
@@ -37,7 +37,7 @@
                             </div>
                             <h5> - Ananta Nurfadhila</h5>
                         </div>
-                        <img src="img/testimonial-logo.png" alt="">
+                        <img src="{{ url('/landing') }}/img/testimonial-logo.png" alt="">
                     </div>
                 </div>
             </div>

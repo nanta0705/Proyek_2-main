@@ -28,9 +28,9 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="images/img-01.png" alt="IMG">page
+					<img src="{{url('/autentikasi')}}/images/img-01.png" alt="IMG">Register Page
 				</div>
-
+                <a href="{{url('/login')}}"> <i class="fa fa-arrow-left"></i></a>
 				<form action="{{url('/register')}}" method="POST" class="login100-form validate-form">
 					<!-- fungsi bagian pengamanan -->
                     @csrf
@@ -42,18 +42,9 @@
 						<input class="input100" type="text" name="name" placeholder="masukan nama">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
+							<i class="fa fa-user" aria-hidden="true"></i>
 						</span>
 					</div>
-
-                    <div class="wrap-input100 validate-input" >
-						<input class="input100" type="text" name="username" placeholder="masukan username">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
-						</span>
-					</div>
-
                     <div class="wrap-input100 validate-input" >
 						<input class="input100" type="text" name="email" placeholder="masukan email">
 						<span class="focus-input100"></span>
@@ -74,7 +65,7 @@
 						<input class="input100" type="text" name="no_tlp" placeholder="masukan no_tlp">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
+							<i class="fa fa-phone" aria-hidden="true"></i>
 						</span>
 					</div>
 
@@ -82,7 +73,7 @@
 						<input class="input100" type="text" name="alamat" placeholder="masukan alamat">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
+							<i class="fa fa-address-card" aria-hidden="true"></i>
 						</span>
 					</div>
 

@@ -10,7 +10,7 @@
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <div class="blog-item set-bg" data-setbg="img/blog/blog-1.jpg">
+                <div class="blog-item set-bg" data-setbg="{{ url('/landing') }}/img/blog/blog-1.jpg">
                     <div class="bi-text">
                         <span class="b-tag">karnaval makeup</span>
                         <h4><a href="#">karnaval makeup hari jadi indramayu</a></h4>
@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="blog-item set-bg" data-setbg="img/blog/blog-2.jpg">
+                <div class="blog-item set-bg" data-setbg="{{ url('/landing') }}/img/blog/blog-2.jpg">
                     <div class="bi-text">
                         <span class="b-tag">bridesmaid makeup</span>
                         <h4><a href="#">bridesmaid makeup </a></h4>
@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="blog-item set-bg" data-setbg="img/blog/blog-3.jpg">
+                <div class="blog-item set-bg" data-setbg="{{ url('/landing') }}/img/blog/blog-3.jpg">
                     <div class="bi-text">
                         <span class="b-tag">Dancer Makeup</span>
                         <h4><a href="#">makeup serentak untuk dancer</a></h4>

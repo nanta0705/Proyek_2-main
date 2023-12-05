@@ -28,14 +28,14 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="{{url('/autentikasi')}}images/img-01.png" alt="IMG">
+					<img src="{{url('/autentikasi')}}/images/img-01.png" alt="IMG">Login Page
 				</div>
 
 				<form action="{{route('login')}}" method="POST" class="login100-form validate-form">
 					<!-- fungsi bagian pengamanan -->
                     @csrf
 					<span class="login100-form-title">
-						Member Login
+						Login
 					</span>
 
 					<div class="wrap-input100 validate-input" >

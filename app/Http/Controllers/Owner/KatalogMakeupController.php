@@ -7,6 +7,7 @@ use App\Models\Owner\KatalogMakeup;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\File;
 
 
 class KatalogMakeupController extends Controller
@@ -17,36 +18,41 @@ class KatalogMakeupController extends Controller
         return view('owner.katalog_makeup.index', compact('katalog_makeup'));
     }
 
-    // please make three function for store, update and delete
 
-    // public function store(request $request)
-    // {
-    //     // dd($request->all());
-    //     try {
-    //         $request->validate([
-    //             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-    //         ]);
+    public function update(Request $request, $id)
+    {
+        try {
+            $request->validate([
+                'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            ]);
 
-    //         $ImageName = time() . '.' . $request->image->extention();
+            $makeup = KatalogMakeup::findOrFail($id);
+            $makeup->name = $request->name;
+            $makeup->description = $request->description;
+            $makeup->price = $request->price;
 
-    //         $request->image->move(public_path('katalog_makeup_image'), $ImageName);
+            if ($request->hasFile('image')) {
+                // Hapus gambar lama jika ada
+                if (File::exists(public_path($makeup->image))) {
+                    File::delete(public_path($makeup->image));
+                }
 
-    //         KatalogMakeup::create([
-    //             'name' => $request->nama,
-    //             'description' => $request->description,
-    //             'price' => $request->price,
-    //             'image' => '/katalog_makeup_image' . $ImageName,
-    //             'user_id' => Auth::user()->id,
+                // upload gambar baru
+                $imageName = time() . '.' . $request->image->extension();
+                $request->image->move(public_path('katalog_makeup_images'), $imageName);
+                $makeup->image = 'katalog_makeup_image/' . $imageName;
+            }
 
-    //         ]);
+            $makeup->save();
 
-    //         Alert::success('Data Makeup Berhasil Ditambahkan');
-    //         return back();
-    //     } catch (\Exception $e) {
-    //         Alert::error('Data Makeup Gagal Disimpan!' . $e->getmessage());
-    //         return back();
-    //     }
-    // }
+            Alert::success('Data Berhasil Diubah');
+            return back();
+        } catch (\Exception $e) {
+
+            Alert::error('Data Gagal Diubah!' . $e->getMessage());
+            return back();
+        }
+    }
 
     public function store(Request $request)
     {

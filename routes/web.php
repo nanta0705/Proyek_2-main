@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ContentController;
 use App\Http\Controllers\Admin\DataClientController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingController;
@@ -7,6 +8,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AppController;
 use App\Http\Controllers\DataOwnerController;
 use App\Http\Controllers\Owner\KatalogMakeupController;
+use App\Http\Controllers\owner\TypeMakeupController;
 use App\Http\Controllers\RegisterController;
 
 /*
@@ -31,8 +33,13 @@ Route::group(['middleware' => ['autentikasi']], function () {
     Route::resource('/admin/data_client', DataClientController::class);
     Route::resource('/admin/data_owner', DataOwnerController::class);
 
+    Route::get('/admin/content', [ContentController::class, 'index']);
+
     Route::get('/owner/dashboard', [AppController::class, 'owner']);
     Route::resource('/owner/katalog_makeup', KatalogMakeupController::class);
+    Route::resource('/owner/type_makeup', TypeMakeupController::class);
+
+
     Route::get('/client/dashboard', [AppController::class, 'client']);
 
 

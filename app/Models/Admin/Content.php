@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Models\Owner;
+namespace App\Models\Admin;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class KatalogMakeup extends Model
+class Content extends Model
 {
     use HasFactory;
-    protected $table = 'katalog_makeup';
+
+    protected $table = "content";
     protected $guarded = [''];
 }

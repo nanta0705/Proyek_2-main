@@ -117,14 +117,15 @@
             <div class="modal-header">
                 <h6 class="modal-title">Edit</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal"><span aria-hidden="true">&times;</span></button>
             </div>
-            <form action="{{url('/owner/katalog_makeup/' .$edit->id)}}" method="post">
+            <form action="{{url('/owner/katalog_makeup/' .$edit->id)}}" method="post"
+                enctype="multipart/form-data">
                 @csrf
                 @method('put')
                 <div class="modal-body">
                     <div class="col-lg-12">
                         <div class="form-group">
                             <label class="form-label">name</label>
-                            <input value="{{$edit->name}}" class="form-control  mb-4 is-valid state-valid" placeholder="Masukan Nama" required="" type="text" name="nama">
+                            <input value="{{$edit->name}}" class="form-control  mb-4 is-valid state-valid" placeholder="Masukan Nama" required="" type="text" name="name">
                         </div>
                     </div>
                     <div class="col-lg-12">
@@ -143,8 +144,15 @@
                     </div>
                     <div class="col-lg-12">
                         <div class="form-group">
-                            <label class="form-label">email</label>
-                            <input value="{{$edit->email}}" class="form-control  mb-4 is-valid state-valid" placeholder="Masukan email" required="" type="email" name="email">
+                            <label for="image">gambar</label>
+                            @if ($edit->image)
+                            <p>Nama File: {( $edit->image )}</p>
+                            <img src="{{ asset(''. $edit->image) }}" alt="current image"
+                                style="max-height: 100px;">
+                            @else
+                                <p>MO Image Available</p>
+                            @endif
+                            <input type="file" class="form-control" name="iamge" id="image">
                         </div>
                     </div>
                 </div>

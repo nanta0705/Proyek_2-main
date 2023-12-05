@@ -33,65 +33,22 @@
                         <li class="side-menu-label1"><a href="javascript:void(0)">Akun</a></li>
                         <li><a href="{{url('/admin/data_client')}}" class="slide-item"> Akun Client</a></li>
                         <li><a href="{{url('/admin/data_owner')}}" class="slide-item"> Akun Owner</a></li>
-
-
                     </ul>
+                </li>
+
+                <li class="slide">
+                    <a class="side-menu__item" data-bs-toggle="slide" href="{{url('/admin/content')}}"><i class="side-menu__icon fe fe-server"></i><span class="side-menu__label">Content Management</span></a>
                 </li>
 
                 <li class="slide">
                     <a class="side-menu__item" data-bs-toggle="slide" href="{{url('/owner/katalog_makeup')}}"><i class="side-menu__icon fe fe-home"></i><span class="side-menu__label">Katalog Makeup</span></a>
                 </li>
 
-                <li class="sub-category">
-                    <h3>Custom & Error Pages</h3>
-                </li>
                 <li class="slide">
-                    <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0);"><i class="side-menu__icon fe fe-settings"></i><span class="side-menu__label">Custom Pages</span><i class="angle fa fa-angle-right"></i></a>
-                    <ul class="slide-menu">
-                        <li class="side-menu-label1"><a href="javascript:void(0)">Custom Pages</a></li>
-                        <li><a href="login.html" class="slide-item"> Login</a></li>
-                        <li><a href="register.html" class="slide-item"> Register</a></li>
-                        <li><a href="forgot-password.html" class="slide-item"> Forgot Password</a></li>
-                        <li><a href="lockscreen.html" class="slide-item"> Lock screen</a></li>
-                        <li class="sub-slide">
-                            <a class="sub-side-menu__item" data-bs-toggle="sub-slide" href="javascript:void(0);"><span class="sub-side-menu__label">Error Pages</span><i class="sub-angle fa fa-angle-right"></i></a>
-                            <ul class="sub-slide-menu">
-                                <li><a class="sub-slide-item" href="400.html">400</a></li>
-                                <li><a class="sub-slide-item" href="401.html">401</a></li>
-                                <li><a class="sub-slide-item" href="403.html">403</a></li>
-                                <li><a class="sub-slide-item" href="404.html">404</a></li>
-                                <li><a class="sub-slide-item" href="500.html">500</a></li>
-                                <li><a class="sub-slide-item" href="503.html">503</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <a class="side-menu__item" data-bs-toggle="slide" href="{{url('/owner/type_makeup')}}"><i class="side-menu__icon fe fe-home"></i><span class="side-menu__label">Type Makeup</span></a>
                 </li>
-                <li class="slide">
-                    <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0);">
-                        <i class="side-menu__icon fe fe-sliders"></i>
-                        <span class="side-menu__label">Submenus</span><i class="angle fa fa-angle-right"></i></a>
-                    <ul class="slide-menu">
-                        <li class="side-menu-label1"><a href="javascript:void(0)">Submenus</a></li>
-                        <li><a href="javascript:void(0);" class="slide-item">Level-1</a></li>
-                        <li class="sub-slide">
-                            <a class="sub-side-menu__item" data-bs-toggle="sub-slide" href="javascript:void(0);"><span class="sub-side-menu__label">Level-2</span><i class="sub-angle fa fa-angle-right"></i></a>
-                            <ul class="sub-slide-menu">
-                                <li><a class="sub-slide-item" href="javascript:void(0);">Level-2.1</a></li>
-                                <li><a class="sub-slide-item" href="javascript:void(0);">Level-2.2</a></li>
-                                <li class="sub-slide2">
-                                    <a class="sub-side-menu__item2" href="javascript:void(0);" data-bs-toggle="sub-slide2"><span class="sub-side-menu__label2">Level-2.3</span><i class="sub-angle2 fa fa-angle-right"></i></a>
-                                    <ul class="sub-slide-menu2">
-                                        <li><a href="javascript:void(0);" class="sub-slide-item2">Level-2.3.1</a></li>
-                                        <li><a href="javascript:void(0);" class="sub-slide-item2">Level-2.3.2</a></li>
-                                        <li><a href="javascript:void(0);" class="sub-slide-item2">Level-2.3.3</a></li>
-                                    </ul>
-                                </li>
-                                <li><a class="sub-slide-item" href="javascript:void(0);">Level-2.4</a></li>
-                                <li><a class="sub-slide-item" href="javascript:void(0);">Level-2.5</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
+
+
 
             </ul>
             <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24">
