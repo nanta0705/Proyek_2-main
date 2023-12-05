@@ -11,4 +11,8 @@ class ContentController extends Controller
     {
         return view("admin.content.index");
     }
+
+    public function store(Request $request)
+    {
+    }
 }
